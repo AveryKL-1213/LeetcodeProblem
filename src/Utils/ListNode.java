@@ -61,4 +61,17 @@ public class ListNode {
         }
         System.out.println();
     }
+
+    public static void printListNodeInfo(ListNode head) {
+        ListNode flag = head;
+        ArrayList<ListNode> listNodeArrayList = new ArrayList<>();
+        while (flag != null) {
+            if (listNodeArrayList.contains(flag)) {
+                break;
+            }
+            listNodeArrayList.add(flag);
+            System.out.println(flag + " Next: " + flag.getNext());
+            flag = flag.getNext();
+        }
+    }
 }

@@ -29,12 +29,8 @@ public class TwoCityScheduling {
         }
         diff.sort(Comparator.naturalOrder());
         int sub = Math.abs(diffA.size() - diffB.size()) / 2;
-        int bias = 0;
-        while (diff.get(bias) < 0) {
-            bias++;
-        }
         for (int i = 0; i < sub; i++) {
-            ans += diff.get(i + bias);
+            ans += diff.get(i);
         }
         return ans;
     }
